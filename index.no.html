@@ -41,8 +41,10 @@
       }
       h1,h2,h3 {
       line-height: 0.9;
-      border-left: 5px solid;
-      padding-left: 15px;
+      /*border-left: 5px solid;
+      padding-left: 15px;*/
+      margin-top: 40px;
+      margin-bottom: 40px;
       }
       #logo {
       display: block;
@@ -50,6 +52,8 @@
       margin-right: auto;
       padding-bottom: 40px; 
       width: 40%;
+      -webkit-filter: drop-shadow( 5px 5px 5px #555 );
+      filter: drop-shadow( 5px 5px 5px #555 ); 
       }
       .sm-ln {
       float: right;
@@ -58,31 +62,43 @@
       clear: both;
       }
       a{
-      //text-decoration: none;
+      /*text-decoration: none;*/
+      }
+      td {
+      padding-right: 20px;
+      }
+      abbr {
+      border-bottom: 1px black dotted;
+/*      text-decoration: underline;
+      -webkit-text-decoration-style: dotted;
+      text-decoration-style: dotted;*/
       }
     </style>
-
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/hackeriet.js"></script>
   </head>
   <body>
     <!-- TODO
          E-postliste / holde seg oppdatert-stæsj
-         Tooltip over at det er stengt
+         SVGWeb polyfill?
       -->
     <img src="comotion-sjn-transparent-1.2.svg" id="logo">
     <a href="index.en.html" class="sm-ln">English, please!</a>
-    <a href="" class="sm-ln">Bare ta meg til wikien &#x21ac</a>
+    <a href="/projects/hackeriet" class="sm-ln">Bare ta meg til wikien &#x21ac</a>
     <h1>Velkommen til Hackeriet!</h1>
     <p>Hackeriet er et <a href="http://hackerspaces.org/" target="_blank">hackerspace</a> i Oslo. Et hackerspace er et sted hvor entusiaster møtes for å leke med teknologi, arbeide med prosjekter og lære av hverandre. 
     </p>
     <p>Vi holder til i første etasje på <a href="https://www.google.no/maps/place/Hausmania+Culture+House/@59.9191477,10.7497947,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e643e28f2a7:0x37e718ea1c5d9449?hl=en">Hausmania, Hausmannsgate 34</a>. 
     </p>
-    <h2>Kommende arrangementer <a href="" class="sm-ln">Fra v&aring;r Meetup-side.</a></h2>
-    <p>javascript javascript</p>
-    <!-- https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=hackeriet&photo-host=public&time=0d%2C1m&page=500&fields=&order=time&status=upcoming&desc=false&sig_id=89312252&sig=08383e6376d49121d671a67b602b62f80a0fb6ac
+    <h2>Kommende arrangementer</h2>
+    <table id="meetup">
+    </table>
+    <!--
+        https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=hackeriet&photo-host=public&time=0d%2C1m&page=500&fields=&order=time&status=upcoming&desc=false&sig_id=89312252&sig=08383e6376d49121d671a67b602b62f80a0fb6ac
  -->
     <h2>Når er det åpent?</h2>
     <p>Hackeriet er åpent for alle på tirsdager og lørdager fra tidlig på kvelden til sent. Ytterdøra er ikke alltid åpen, i så fall benytt vår <a href="http://door.hackeriet.no">Internett-ringeklokke</a> så kommer noen og åpner.</p>
-    <p>Medlemmer har tilgang døgnet rundt. Akkurat nå er det <strong>ingen der</strong>.</p>
+    <p>Medlemmer har tilgang døgnet rundt. Akkurat nå er det <strong><abbr title="Denne delen av siden er dynamisk generert!" id="doorstatus">ingen der</abbr></strong>.</p>
     <h2>Hvordan kan jeg bli med?</h2>
     <p>Først og fremst møt opp på noen arragementer og åpne dager så du kan bli kjent med oss og vi deg. Vi er opptatt av at alle som dukker opp skal føle seg velkommen og du trenger ikke være medlem for å bli med på noe.</p>
     <p>Det er ingen krav til kompetanse eller annet og vi setter pris på et blandet miljø med forskjellig ekspertise. I tillegg til å få betale <a href="">medlemsavgift</a> får medlemmer stå på en diskusjonsliste og tilgang til lokalene døgnet rundt.</p>

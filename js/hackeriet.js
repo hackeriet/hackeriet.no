@@ -32,26 +32,24 @@ function init() {
     }
 }
 
-function populate_meetup() {
-    var meetup = new XMLHttpRequest();
+function meetup(data){
+    for (r in data.results) {
+        var e = data.results[r];
+        var tr = document.createElement("tr");
+        var m = moment(e.time);
+        tr.innerHTML = "<td style='float: right'>" + m.calendar() + "</td><td>" +
+            m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
+            e.event_url +"' target='_blank'>" + e.name + "</a></td>";
+        document.getElementById("meetup").appendChild(tr);
+    };
+}
 
-    meetup.open('GET', '/meetup.json', true);
-    meetup.onload = function(){
-        if(this.status >= 200 && this.status < 400) {
-            var data = JSON.parse(this.response);
-            for (r in data.results) {
-                var e = data.results[r];
-                var tr = document.createElement("tr");
-                var m = moment(e.time);
-                tr.innerHTML = "<td style='float: right'>" + m.calendar() + "</td><td>" +
-                    m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
-                    e.event_url +"' target='_blank'>" + e.name + "</a></td>";
-                document.getElementById("meetup").appendChild(tr);
-            };
-        }
+function door(data) {
+    if (data.status === "OPEN") {
+        document.getElementById("doorstatus").innerHTML = _hackeriet.openText;
+    } else {
+        document.getElementById("doorstatus").innerHTML = _hackeriet.closedText;
     }
-    // meetup.onerror
-    meetup.send()
 }
 
 function update_door() {
@@ -71,7 +69,6 @@ function update_door() {
 }
 
 init()
-populate_meetup()
 update_door()
 
 

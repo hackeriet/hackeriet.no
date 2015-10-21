@@ -1,11 +1,16 @@
-body { 
+.text {
     margin:40px auto;
     max-width:650px;
     line-height:1.6em;
     font-family: 'Roboto', sans-serif;
     font-size:14pt;
     color: #444;
-    padding: 0 10px
+    padding: 2em;
+
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.8);
+
+    height: 100%;
 }
 h1,h2,h3 {
     line-height: 0.9;
@@ -19,7 +24,7 @@ h1,h2,h3 {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 40px; 
-    width: 40%;
+    height: 40vh;
     -webkit-filter: drop-shadow( 5px 5px 5px #555 );
     filter: drop-shadow( 5px 5px 5px #555 ); 
 }
@@ -41,3 +46,38 @@ abbr {
       -webkit-text-decoration-style: dotted;
       text-decoration-style: dotted;*/
 }
+
+section {
+    padding: 0em;
+    border: 0em;
+    font-size: 0;
+}
+
+#banner { 
+    min-height: 90vh; 
+
+    background-image: url("images/banner1.jpg");
+    background-repeat: no-repeat;
+}
+
+#arrangement { 
+    min-height: 90vh; 
+
+    background-color: #FCFBE3;
+    background-repeat: no-repeat;
+}
+
+#whenopen { 
+    min-height: 90vh; 
+
+    background-color: #D1BFAB;
+    background-repeat: no-repeat;
+}
+
+#questions { 
+    min-height: 90vh; 
+
+    background-color: #CDE4D1;
+    background-repeat: no-repeat;
+}
+

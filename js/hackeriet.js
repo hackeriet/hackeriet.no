@@ -37,7 +37,7 @@ function meetup(data){
         var e = data.results[r];
         var tr = document.createElement("tr");
         var m = moment(e.time);
-        tr.innerHTML = "<td style='float: right'>" + m.calendar() + "</td><td>" +
+        tr.innerHTML = "<td style='float: right;width:150px'>" + m.calendar() + "</td><td style='width:80px'>" +
             m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
             e.event_url +"' target='_blank'>" + e.name + "</a></td>";
         document.getElementById("meetup").appendChild(tr);

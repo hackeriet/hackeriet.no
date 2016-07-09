@@ -8,6 +8,12 @@
     <link rel="stylesheet" type="text/css" href="hackeriet.css">
     <link rel="alternate" href="index.en.html" hreflang="en" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- mailchimp -- >
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+    </style>
+    <!-- end mailchimp -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
     <!-- Start favicon cruft -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=9BBeJ8xxbe">
@@ -44,28 +50,46 @@
   <body>
     <!-- TODO
          We should probably not leak user data thorugh web fonts
-         E-postliste / holde seg oppdatert-stæsj
+         .. and now through mailchimp
          SVGWeb polyfill?
       -->
     <img src="comotion-sjn-transparent-1.2.svg" id="logo">
-    <a href="index.en.html" class="sm-ln">English, please!</a>
-    <a href="https://projects.hackeriet.no/" class="sm-ln">Wikien</a>
+    <a href="index.en.html" class="sm-ln">English</a>
+    <!-- <a href="https://projects.hackeriet.no/" class="sm-ln">Wikien</a> -->
     <h1>Velkommen til Hackeriet!</h1>
     <p>Hackeriet er et <a href="http://hackerspaces.org/" target="_blank">hackerspace</a> i Oslo. Et hackerspace er et sted hvor entusiaster møtes for å leke med teknologi, arbeide med prosjekter og lære av hverandre. 
     </p>
-    <p>Vi holder til i første etasje på <a href="https://www.google.no/maps/place/Hausmania+Culture+House/@59.9191477,10.7497947,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e643e28f2a7:0x37e718ea1c5d9449?hl=en">Hausmania, Hausmannsgate 34</a>. 
+    <p>Vi holder til i første etasje på <a href="https://www.google.no/maps/place/Hausmania+Culture+House/@59.9191477,10.7497947,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e643e28f2a7:0x37e718ea1c5d9449?hl=en">Hausmania, i Hausmannsgate 34</a>. 
+    </p>
+    <h2>Nyhetsbrev</h2>
+    <p>
+      Meld deg på epostlista vår for et sporadisk nyhetsbrev om hva som skjer på Hackeriet:
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="//hackeriet.us11.list-manage.com/subscribe/post?u=2be4d10224ec1931ae837c65a&amp;id=a735a2996b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Epostadresse" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2be4d10224ec1931ae837c65a_a735a2996b" tabindex="-1" value=""></div>
+            <input type="submit" value="Abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+
     </p>
     <h2>Kommende arrangementer</h2>
     <table id="meetup">
     </table>
     <h2>Når er det åpent?</h2>
     <p>Hackeriet er åpent for alle på tirsdager og lørdager fra tidlig på kvelden til sent. Ytterdøra er ikke alltid åpen, bruk <a href="http://door.hackeriet.no">ringeklokka</a> så kommer noen og åpner.</p>
-    <p>Medlemmer har tilgang døgnet rundt. Akkurat nå er det <strong><abbr title="Denne delen av siden er dynamisk generert!" id="doorstatus">ingen der</abbr></strong>.</p>
-    <h2>Hvordan kan jeg bli med?</h2>
+    <p>Medlemmer har tilgang døgnet rundt. Akkurat nå er det <strong><abbr title="Magi!" id="doorstatus">ingen der</abbr></strong>.</p>
+    <h2>Kan jeg bli med?</h2>
     <p>Først møt opp på noen arrangementer og åpne dager så du kan bli kjent med oss og vi deg. Vi er opptatt av at alle som dukker opp skal føle seg velkomne og du trenger ikke være medlem for å bli med på noe.</p>
     <p>I tillegg til å få betale <a href="https://projects.hackeriet.no/projects/hackeriet/wiki/Membership">medlemsavgift</a> får medlemmer stå på en e-postliste og tilgang til lokalene døgnet rundt.</p>
     <p>Når du har bestemt deg for at Hackeriet er for deg fyller du ut et kort <a href="https://docs.google.com/forms/d/1yDTcKQn6V10RftPtUO-s6Ue3OtElu8HxIVsBW54vf38/viewform">skjema</a> så ordner vi det praktiske.</p>
-    <p>Hvis du er av den chattende typen anbefaler vi den passe aktive <a href="https://projects.hackeriet.no/projects/hackeriet/wiki/irc">IRC-kanalen</a> vår.</p>
+    <h2>Chat</h2>
+    <p>Mye av aktivteten til Hackeriet skjer ikke overaskende i kyberrommet. Du kan bli med <a href="https://vector.im/beta/#/room/!HvLHPoJuDWGcYnQJQB:hackeriet.no">via Matrix</a> eller gjennom IRC #oslohackerspace på Freenode.</p>
     <h2>Jeg har spørsmål!</h2>
     <p>Send mail til styret krøllalfa hackeriet dot no.</p>  
     <p>For arrangement ta kontakt med booking krøllalfa hackeriet dot no.</p>  

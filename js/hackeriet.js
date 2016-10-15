@@ -39,8 +39,8 @@ function meetup(mup){
             || ((moment().get('date') == m.get('date')) && (moment().get('month') == m.get('month')))){
                 var tr = document.createElement("tr");
             tr.innerHTML = "<td style='float: right;width:150px'>" + m.calendar() +
-                "</td><td style='width:80px'>" +
-                m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
+                "</td><td style='width:90px'>" +
+                        m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
                 e.link +"' target='_blank'>" + e.name + "</a></td>";
                 document.getElementById("meetup").appendChild(tr);
             };

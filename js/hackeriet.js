@@ -32,15 +32,18 @@ function init() {
     }
 }
 
-function meetup(data){
-    for (r in data.results) {
-        var e = data.results[r];
-        var tr = document.createElement("tr");
+function meetup(mup){
+    for (e of mup.data) {
         var m = moment(e.time);
-        tr.innerHTML = "<td style='float: right;width:150px'>" + m.calendar() + "</td><td style='width:80px'>" +
-            m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
-            e.event_url +"' target='_blank'>" + e.name + "</a></td>";
-        document.getElementById("meetup").appendChild(tr);
+        if ((e.status == "upcoming" && m.isBefore(moment().day(30)))
+            || ((moment().get('date') == m.get('date')) && (moment().get('month') == m.get('month')))){
+                var tr = document.createElement("tr");
+            tr.innerHTML = "<td style='float: right;width:150px'>" + m.calendar() +
+                "</td><td style='width:80px'>" +
+                m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
+                e.link +"' target='_blank'>" + e.name + "</a></td>";
+                document.getElementById("meetup").appendChild(tr);
+            };
     };
 }
 

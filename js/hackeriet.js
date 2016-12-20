@@ -32,16 +32,30 @@ function init() {
     }
 }
 
-function meetup(mup){
-    for (e of mup.data) {
-        var m = moment(e.time);
-        if ((e.status == "upcoming" && m.isBefore(moment().day(30)))
+function update_meetup() {
+    var meetup = new XMLHttpRequest();
+    // Meetup data fetched by a systemd.timer job from:
+    // https://api.meetup.com/hackeriet/events?scroll=recent_past&page=20
+    meetup.open('GET', '/meetup.json', true);
+    meetup.onload = function(){
+        if(this.status >= 200 && this.status < 400) {
+            var data = JSON.parse(this.response);
+            populateMeetupList(data);
+        }
+    }
+    meetup.send();
+}
+
+function populateMeetupList(eventList){
+    for (meetup of eventList) {
+        var m = moment(meetup.time);
+        if ((meetup.status == "upcoming" && m.isBefore(moment().day(30)))
             || ((moment().get('date') == m.get('date')) && (moment().get('month') == m.get('month')))){
                 var tr = document.createElement("tr");
             tr.innerHTML = "<td style='float: right;width:150px'>" + m.calendar() +
                 "</td><td style='width:90px'>" +
                         m.format(_hackeriet.timeFormat) + "</td><td><a href='" +
-                e.link +"' target='_blank'>" + e.name + "</a></td>";
+                meetup.link +"' target='_blank'>" + meetup.name + "</a></td>";
                 document.getElementById("meetup").appendChild(tr);
             };
     };
@@ -71,7 +85,6 @@ function update_door() {
     door.send();
 }
 
-init()
-update_door()
-
-
+init();
+update_door();
+update_meetup();

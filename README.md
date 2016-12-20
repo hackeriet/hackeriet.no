@@ -12,12 +12,16 @@ the correct directory.
 #### Install
 
     # Help systemd find the unit files
-    sudo cp ./meetup_com-data.{service,timer} /etc/systemd/system/
-    sudo systemctl daemon-reload
+    cp ./meetup_com-data.{service,timer} /etc/systemd/system/
+    systemctl daemon-reload
 
     # Start now
-    sudo systemctl start meetup_com-data.{service,timer}
+    systemctl start meetup_com-data.{service,timer}
 
-    # Start on boot
-    sudo systemctl enable meetup_com-data.{service,timer}
+    # Automatically start on boot
+    systemctl enable meetup_com-data.{service,timer}
+
+    # Make sure target file is writeable by service user
+    touch /var/www/hackeriet/meetup.json
+    chown nobody:nogroup /var/www/hackeriet/meetup.json
 

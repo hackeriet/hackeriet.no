@@ -1,0 +1,9 @@
+[Unit]
+Description=Download meetup.com event data 1min after boot then once every hour
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target

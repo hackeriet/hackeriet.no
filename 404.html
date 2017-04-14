@@ -44,9 +44,17 @@
 		fn(str => {
 		  document.title = str
 		})
+
+		function blingify () {
+			let j = 0
+			setInterval(() => {
+				document.querySelector('body').style.backgroundPosition = `${j}px ${j}px`
+				j++
+			}, 42)
+		}
 	</script>
 </head>
-<body onload="yo()">
+<body onload="blingify()">
 	<section id="hackers">
 		<h1>404</h1>
 	</section>

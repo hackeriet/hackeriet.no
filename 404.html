@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hackeriet - Not found :/</title>
+	<style>
+	body, body * {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-image: url(images/hackers-love.jpg);
+		background-size: 20vw auto;
+	}
+	#hackers {
+		width: 80vw;
+		height: 80vh;
+		position: absolute;
+		top: 10vh;
+		left: 10vw;
+		background-image: url(images/hackers-love.jpg);
+		background-size: cover;
+		background-position-y: center;
+	}
+	h1 {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		font-size: 77px;
+		font-family: monospace;
+		-webkit-text-stroke: 2px white;
+	}
+	</style>
+	<script>
+		console.log('#oslohackerspace @ chat.freenode.net for a 200')
+		let str = document.title, i = 0, len = 42 + 1, x, d
+		const pool = [4,0]
+		const fn = cb => {
+		  x = i++ % len
+		  if (!x) d = !d
+		  str = d ? str + pool[x % pool.length] : str.substr(0, str.length - 1)
+		  setTimeout(() => cb(str) + fn(cb), 420)
+		}
+		fn(str => {
+		  document.title = str
+		})
+	</script>
+</head>
+<body onload="yo()">
+	<section id="hackers">
+		<h1>404</h1>
+	</section>
+</body>
+</html>
+

@@ -29,6 +29,13 @@ h1,h2,h3 {
     display: block;
     clear: both;
 }
+.warning {
+  /* taken from bootstrap 4 */
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  padding: 1em;
+}
 a{
     /*text-decoration: none;*/
 }

@@ -90,7 +90,7 @@ function setupWebsocket() {
     ws.addEventListener("message", msg => {
         const p = msg.data.split(" ");
         if (p[0] !== "hackeriet/environment/light") { return }
-            const p2 = map(p[1], 400, 1024, 0, 100);
+            const p2 = map(p[1], 400, 1024, 0, 1);
             document.getElementById("logo").style.opacity = p2;
     })
 }

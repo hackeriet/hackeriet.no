@@ -85,6 +85,21 @@ function update_door() {
     door.send();
 }
 
+function setupWebsocket() {
+    var ws = new WebSocket("wss://hackeriet.no/ws/");
+    ws.addEventListener("message", msg => {
+        const p = msg.data.split(" ");
+        if (p[0] !== "hackeriet/environment/light") { return }
+            console.log("Light thing: ", map(p[1], 400, 1024, 0, 100));
+            document.getElementById("logo").style.opacity = p[1];
+    })
+}
+
+function map(x, in_min, in_max, out_min, out_max) {
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
 init();
 update_door();
 update_meetup();
+setupWebsocket();

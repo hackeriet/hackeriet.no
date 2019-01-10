@@ -21,7 +21,8 @@ h1,h2,h3 {
     padding-bottom: 40px; 
     width: 40%;
     -webkit-filter: drop-shadow( 5px 5px 5px #555 );
-    filter: drop-shadow( 5px 5px 5px #555 ); 
+    filter: drop-shadow( 5px 5px 5px #555 );
+    transition: opacity 0.7s ease-in-out;
 }
 .sm-ln {
     float: right;

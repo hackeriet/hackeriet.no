@@ -30,6 +30,7 @@ function init() {
         _hackeriet.openText = "people there";
         _hackeriet.closedText = "no one there";
     }
+    _hackeriet.message_elms = {};
 }
 
 function update_meetup() {
@@ -85,10 +86,23 @@ function update_door() {
     door.send();
 }
 
+function messageUpdate(k,v) {
+    var elm = _hackeriet.message_elms[k];
+    if (!elm) {
+        elm = document.createElement("nobr");
+        elm.style="font-size:8px;padding-right:5px;font-family:Courier;";
+        elm.id = k;
+        _hackeriet.message_elms[k] = elm;
+        document.body.appendChild(elm);
+    }
+    elm.innerHTML = "<span style='color:#999;'>"+k + "</span> <span>" + v + "</span>";
+}
+
 function setupWebsocket() {
     var ws = new WebSocket("wss://hackeriet.no/ws/");
     ws.addEventListener("message", msg => {
         const p = msg.data.split(" ");
+        messageUpdate(p[0],p[1]);
         if (p[0] !== "hackeriet/environment/light") { return }
             const p2 = map(p[1], 400, 1024, 0.4, 1);
             document.getElementById("logo").style.opacity = p2;

@@ -49,3 +49,10 @@ abbr {
       -webkit-text-decoration-style: dotted;
       text-decoration-style: dotted;*/
 }
+
+
+.notice {
+    border: 4px dashed #ff0000;
+    padding:1em;
+
+}

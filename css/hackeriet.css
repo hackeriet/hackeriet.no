@@ -56,3 +56,12 @@ abbr {
     padding:1em;
 
 }
+
+.notice-yellow {
+    border: 4px dashed #ff0;
+    padding:1em;
+}
+
+.notice-blue{
+    border: 4px dashed #00f;
+    padding:1em;

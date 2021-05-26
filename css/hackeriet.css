@@ -52,10 +52,10 @@ abbr {
 
 
 .notice {
-    border: 8px dashed #ff0000;
-    padding:1em;
-
+    border: 4px dashed pink;
+    padding: 2em;
 }
+
 
 .notice-yellow {
     border: 4px dashed #ff0;

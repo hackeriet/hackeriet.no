@@ -86,6 +86,23 @@ function update_door() {
     door.send();
 }
 
+
+function update_door_CO2() {
+    var door_co2 = new XMLHttpRequest();
+    door_co2.open('GET', 'http://aleksei.hackeriet.no/door.json', true);
+    door_co2.onload = function(){
+        if(this.status >= 200 && this.status < 400) {
+            var data = JSON.parse(this.response);
+            if (data.status === "OPEN") {
+                document.getElementById("doorstatus").innerHTML = _hackeriet.openText;
+            } else {
+                document.getElementById("doorstatus").innerHTML = _hackeriet.closedText;
+            }
+        }
+    }
+    door.send();
+}
+
 function messageUpdate(k,v) {
     var elm = _hackeriet.message_elms[k];
     if (!elm) {

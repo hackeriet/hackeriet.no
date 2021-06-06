@@ -100,7 +100,7 @@ function update_door_CO2() {
             }
         }
     }
-    door.send();
+    door_co2.send();
 }
 
 function messageUpdate(k,v) {

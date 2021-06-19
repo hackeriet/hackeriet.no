@@ -89,7 +89,7 @@ function update_door() {
 
 function update_door_CO2() {
     var door_co2 = new XMLHttpRequest();
-    door_co2.open('GET', 'http://aleksei.hackeriet.no/door.json', true);
+    door_co2.open('GET', 'https://aleksei.hackeriet.no/door.json', true);
     door_co2.onload = function(){
         if(this.status >= 200 && this.status < 400) {
             var data = JSON.parse(this.response);

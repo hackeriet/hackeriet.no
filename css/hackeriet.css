@@ -23,6 +23,9 @@ body {
 .trans {
     background-image: url("/images/flag-trans.png");
 }
+.progress-pride {
+    background-image: url("/images/flag-progress-pride.png");
+}
 
 h1,h2,h3 {
     line-height: 0.9;

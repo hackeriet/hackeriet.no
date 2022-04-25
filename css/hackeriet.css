@@ -96,3 +96,13 @@ img.thumbnail {
     padding: 5px;
     margin: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #22272E;
+        color: #ADBAC7;
+    }
+    a {
+        color: #539BF5;
+    }
+}

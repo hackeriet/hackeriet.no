@@ -76,6 +76,19 @@ abbr {
     padding: 2em;
 }
 
+.notice-oslohack {
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to left, #B239FF, #6800E7, #05B9EC, #B239FF, #6800E7, #05B9EC) 1;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+.notice-oslohack a {
+    text-shadow: 0px 0px 3px #B239FF;
+}
+
 
 .notice-yellow {
     border: 4px dashed #ff0;

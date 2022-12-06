@@ -1,0 +1,2 @@
+hackeriet_vedtekter.odf: Bylaws for Hackeriet (in Norwegian)
+hackeriet_vedtekter.pdf: PDF of the document above

@@ -62,6 +62,47 @@ function populateMeetupList(eventList){
     };
 }
 
+function update_mobilizon() {
+    var meetup = new XMLHttpRequest();
+    // Meetup data fetched by a systemd.timer job from: https://events.hackeriet.no/@us
+    meetup.open('GET', '/events.json', true);
+    meetup.onload = function(){
+        if(this.status >= 200 && this.status < 400) {
+            var data = JSON.parse(this.response);
+            populateMobilizonList(data);
+        }
+    }
+    meetup.send();
+}
+
+function populateMobilizonList(eventList){
+    for (meetup of eventList) {
+        var m = moment(meetup.time);
+        var tr = document.createElement("tr");
+
+        let col = document.createElement("td");
+        col.style.float = "right";
+        col.style.width = "150px";
+        col.innerText = m.calendar()
+        tr.appendChild(col);
+
+        col = document.createElement("td");
+        col.style.width = "90px";
+        col.innerText = m.format(_hackeriet.timeFormat);
+        tr.appendChild(col);
+
+        col = document.createElement("td");
+        let link = document.createElement("a");
+        link.href = meetup.link;
+        link.target = "_blank";
+        link.innerText = meetup.name;
+        col.appendChild(link);
+        tr.appendChild(col);
+
+        document.getElementById("meetup").appendChild(tr);
+    };
+}
+
 function door(data) {
     if (data.status === "OPEN") {
         document.getElementById("doorstatus").innerHTML = _hackeriet.openText;
@@ -132,5 +173,6 @@ function map(x, in_min, in_max, out_min, out_max) {
 
 init();
 update_door();
-update_meetup();
+//update_meetup();
+update_mobilizon();
 setupWebsocket();

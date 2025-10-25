@@ -1,4 +1,4 @@
-body { 
+body {
     margin:40px auto;
     max-width:780px;
     line-height:1.6em;
@@ -108,7 +108,15 @@ img.thumbnail {
     border: 2px solid #C0C0C0;
     padding: 5px;
     margin: 10px;
+    box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+    img.thumbnail {
+        width: 50vw;
+    }
+}
+
 
 @media (prefers-color-scheme: dark) {
     body {

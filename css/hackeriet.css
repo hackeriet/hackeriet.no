@@ -108,6 +108,7 @@ img.thumbnail {
     border: 2px solid #C0C0C0;
     padding: 5px;
     margin: 10px;
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {

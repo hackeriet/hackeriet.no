@@ -111,6 +111,13 @@ img.thumbnail {
     box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+    img.thumbnail {
+        width: 50vw;
+    }
+}
+
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #22272E;

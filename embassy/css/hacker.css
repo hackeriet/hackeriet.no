@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "OCR-A";
+    src: url("../fonts/OCR-A.ttf").format("tff");
+}
+
+body, h1, h2, h3 {
+    font-family: "OCR-A";
+}
+
+.title{
+    font-size: 36pt;
+}
+
+.container {
+    text-align: center;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -76,14 +76,15 @@ function update_mobilizon() {
 }
 
 function populateMobilizonList(eventList){
-    for (meetup of eventList) {
-        var m = moment(meetup.time);
-        var tr = document.createElement("tr");
+    let sortedEventList = eventList.sort((a,b)=> Date.parse(b.time)- Date.parse(a.time))
+    for (let meetup of sortedEventList) {
+        let m = moment(meetup.time);
+        let tr = document.createElement("tr");
 
         let col = document.createElement("td");
         col.style.float = "right";
         col.style.width = "150px";
-        col.innerText = m.calendar()
+        col.innerText = m.calendar();
         tr.appendChild(col);
 
         col = document.createElement("td");
@@ -103,14 +104,6 @@ function populateMobilizonList(eventList){
     };
 }
 
-function door(data) {
-    if (data.status === "OPEN") {
-        document.getElementById("doorstatus").innerHTML = _hackeriet.openText;
-    } else {
-        document.getElementById("doorstatus").innerHTML = _hackeriet.closedText;
-    }
-}
-
 function update_door() {
     var door = new XMLHttpRequest();
     door.open('GET', '/door.json', true);
@@ -125,23 +118,6 @@ function update_door() {
         }
     }
     door.send();
-}
-
-
-function update_door_CO2() {
-    var door_co2 = new XMLHttpRequest();
-    door_co2.open('GET', 'https://aleksei.hackeriet.no/door.json', true);
-    door_co2.onload = function(){
-        if(this.status >= 200 && this.status < 400) {
-            var data = JSON.parse(this.response);
-            if (data.status === "OPEN") {
-                document.getElementById("doorstatus").innerHTML = _hackeriet.openText;
-            } else {
-                document.getElementById("doorstatus").innerHTML = _hackeriet.closedText;
-            }
-        }
-    }
-    door_co2.send();
 }
 
 function messageUpdate(k,v) {

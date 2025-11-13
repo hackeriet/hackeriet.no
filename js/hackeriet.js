@@ -76,7 +76,7 @@ function update_mobilizon() {
 }
 
 function populateMobilizonList(eventList){
-    let sortedEventList = eventList.sort((a,b)=> Date.parse(b.time)- Date.parse(a.time))
+    let sortedEventList = eventList.sort((a,b)=> Date.parse(a.time)- Date.parse(b.time))
     for (let meetup of sortedEventList) {
         let m = moment(meetup.time);
         let tr = document.createElement("tr");

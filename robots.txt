@@ -4,6 +4,7 @@
 Sitemap: https://hackeriet.no/sitemap.xml
 
 User-agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 # Public website content and assets.
 Allow: /

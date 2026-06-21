@@ -1,0 +1,5 @@
+*/ See https://humanstxt.org/ */
+*/ Hackers */
+ - Hans-Petter Fjeld aka Atluxity
+ - website: atluxity.no
+ - About: Born 1985, co-founded the space, currently head of the board. I make mistakes.

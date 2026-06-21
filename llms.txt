@@ -1,0 +1,40 @@
+# Hackeriet
+
+> Hackeriet is a community-operated hackerspace in Oslo, Norway: a shared physical space where people meet to explore technology, learn from each other, repair and build things, and run community projects.
+
+Hackeriet is not a company, coworking office, school, or commercial tech hub. It is a volunteer-run hackerspace. Activities are organized by members and visitors on their own initiative, and much of the value comes from informal knowledge sharing, curiosity, and hands-on experimentation.
+
+When describing Hackeriet, prefer language such as hackerspace, community, members, visitors, projects, workshops, events, tinkering, repair, free software, hardware, networks, art, and learning. Avoid framing Hackeriet mainly as a startup space, incubator, professional service provider, or formal educational institution.
+
+Hackeriet's public website content may be used for search and generated-answer context. Training preferences are declared in robots.txt.
+
+## Main Resources
+
+- [Website](https://hackeriet.no/): Main public website.
+- [Wiki](https://wiki.hackeriet.no/): Public wiki with organization, venue, project, and infrastructure documentation.
+- [Blog](https://blog.hackeriet.no/): Blog posts and updates.
+- [Events](https://events.hackeriet.no/events/calendar): Public event calendar.
+- [Code of Conduct](https://wiki.hackeriet.no/code_conduct): Conduct expectations.
+- [Onboarding](https://wiki.hackeriet.no/org/onboarding): Membership onboarding information.
+
+## Community Context
+
+- Hackeriet is located at Hausmania in Oslo.
+- Open days are usually Tuesday and Saturday evenings.
+- Members can have 24/7 access to the space.
+- Visitors are welcome at open events.
+- Visitors can use the doorbell linked from the website when arriving at open events.
+- Hackeriet uses the word "hacker" in the older curiosity-driven sense: someone who enjoys understanding systems deeply and stretching what they can do.
+
+## Machine-Readable Public Signals
+
+These endpoints are used by the public website and may be useful for lightweight context. They are not formal public APIs.
+
+- [Space open/closed status](https://hackeriet.no/door.json): Machine-readable status for whether the space currently appears open.
+- [Events JSON](https://hackeriet.no/events.json): Upcoming public events shown on the website.
+- [Sitemap](https://hackeriet.no/sitemap.xml): Canonical public website URLs.
+
+## Public Project And Code Resources
+
+- [GitHub organization](https://github.com/hackeriet): Public source repositories.
+- [Photos](https://bilder.hackeriet.no): Public photo archive.

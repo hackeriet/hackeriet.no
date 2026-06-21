@@ -1,0 +1,26 @@
+# robots.txt for https://hackeriet.no/
+# Site policy follows RFC 9309.
+
+User-agent: *
+
+# Public website content and assets.
+Allow: /
+Allow: /index.no.html
+Allow: /index.en.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /resources/
+Allow: /favicons/
+Allow: /docs/
+Allow: /events.json
+Allow: /door.json
+
+# Operational or non-content routes on the main vhost.
+Disallow: /hooks/
+Disallow: /hula/
+Disallow: /hausrom
+Disallow: /plantepix
+Disallow: /tmp/
+Disallow: /munin
+Disallow: /afterparty

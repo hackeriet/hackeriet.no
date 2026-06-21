@@ -1,6 +1,8 @@
 # robots.txt for https://hackeriet.no/
 # Site policy follows RFC 9309.
 
+Sitemap: https://hackeriet.no/sitemap.xml
+
 User-agent: *
 
 # Public website content and assets.
